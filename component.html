@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>React Component Assignment</title>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+        <script type="text/babel">
+            class ToDoList extends React.Component {
+                render() {
+                    return (
+                        <div>
+                            <ul>
+                            <li>Walk the dog</li>
+                            <li>Feed the cat</li>
+                            <li>Wash laundry</li>
+                            </ul>
+                        </div>
+                    );
+                }
+            }
+            ReactDOM.render(
+                <ToDoList />, document.getElementById('app')
+            );
+        </script>
+    </body>
+</html>
