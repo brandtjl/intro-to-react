@@ -10,20 +10,28 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
         <script type="text/babel">
             class ToDoList extends React.Component {
+                constructor(props) {
+                    super(props);
+                    this.state = {
+                        catName: "Snowball"
+                    }
+                }
                 render() {
                     return (
                         <div>
                             <ul>
-                            <li>Walk the dog</li>
-                            <li>Feed the cat</li>
+                            <li>Walk {this.props.dogName}</li>
+                            <li>Feed {this.state.catName}</li>
                             <li>Wash laundry</li>
                             </ul>
                         </div>
                     );
                 }
             }
+
             ReactDOM.render(
-                <ToDoList />, document.getElementById('app')
+                <ToDoList 
+                dogName={"Rebel"}/>, document.getElementById('app')
             );
         </script>
     </body>
