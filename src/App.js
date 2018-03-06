@@ -29,10 +29,12 @@ class App extends Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    if (!this.state.newTodoDescription) { return };
+    console.log('[' + this.state.newTodoDescription + ']'); //to verify value
+    if (this.state.newTodoDescription===' ') { return }; // had to change. . . provided 'if' statement didn't work
     const newTodo = { description: this.state.newTodoDescription, isCompleted: false };
-    this.setState({ todos: [...this.state.todos, newTodo], newTodoDescription: ' ' });
+    this.setState({ todos: [...this.state.todos, newTodo], newTodoDescription: '' });
   }
+ 
 
   render() {
     return (
